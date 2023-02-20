@@ -9,7 +9,13 @@ class ButtonWidget extends StatelessWidget {
   final double fontSize;
   final VoidCallback function;
 
-   const ButtonWidget({Key? key, required this.color, required this.text, this.borderRadius = 25, this.fontSize = 20,required this.function}) : super(key: key);
+   const ButtonWidget({Key? key,
+     required this.color,
+     required this.text,
+     this.borderRadius = 25,
+     this.fontSize = 20,
+     required this.function})
+       : super(key: key);
 
   @override
   Widget build(BuildContext context) {

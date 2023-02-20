@@ -12,7 +12,7 @@ class MovieDetailsState extends Equatable {
   final MovieDetail? movieDetail;
   final RequestState movieDetailsState;
   final String movieDetailsMessage;
-  final List<Recommendation> recommendation;
+  final List<Recommendation>recommendation;
   final RequestState recommendationState;
   final String recommendationMessage;
   MovieDetailsState copyWith({

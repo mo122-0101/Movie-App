@@ -2,13 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:movie/authentication_module/presentation/screens/forgot_password_screen.dart';
 import 'package:movie/authentication_module/presentation/screens/sign_in_screen.dart';
 import 'package:movie/core/services/services_locator.dart';
-
-
-import 'authentication_module/presentation/screens/get_start_screen.dart';
 import 'authentication_module/presentation/screens/sign_up_screen.dart';
-
-
-
+import 'movies_module/presentation/screens/movies_screen.dart';
 void main(){
 ServicesLocator().init();
 
@@ -36,7 +31,7 @@ class MyApp extends StatelessWidget {
 
 
 
-      home: const GetStartScreen(),
+      home: const MoviesScreen(),
     );
   }
 }

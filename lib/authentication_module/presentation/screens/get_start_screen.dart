@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:movie/authentication_module/presentation/screens/sign_in_screen.dart';
-import 'package:movie/authentication_module/widget/button_widget.dart';
+
+
+import '../widget/button_widget.dart';
 
 class GetStartScreen extends StatelessWidget {
   const GetStartScreen({Key? key}) : super(key: key);
@@ -13,7 +15,7 @@ class GetStartScreen extends StatelessWidget {
           Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/descomposition-person-wearing-vr-glasses.jpg"),
+            image: AssetImage("assets/images/thriller_movies.jpg"),
             fit: BoxFit.cover,
           ),
         ),
