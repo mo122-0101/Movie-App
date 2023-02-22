@@ -5,7 +5,7 @@ class ButtonWidget extends StatelessWidget {
   final Color color;
   final double borderRadius;
   final String text;
-
+  final TextStyle? style;
   final double fontSize;
   final VoidCallback function;
 
@@ -14,6 +14,7 @@ class ButtonWidget extends StatelessWidget {
      required this.text,
      this.borderRadius = 25,
      this.fontSize = 20,
+     this.style,
      required this.function})
        : super(key: key);
 
@@ -23,7 +24,7 @@ class ButtonWidget extends StatelessWidget {
       onTap: function,
       child: Container(
         alignment: Alignment.center,
-        height: 80,
+        height: 70,
         width: double.infinity,
         decoration: BoxDecoration(
           color: color,

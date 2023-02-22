@@ -1,22 +1,22 @@
 part of 'login_cubit.dart';
-
+//nnp
 @immutable
-abstract class LoginState {}
+abstract class MovieLoginState {}
 
-class LoginInitial extends LoginState {}
+class MovieLoginInitial extends MovieLoginState {}
 
-class ChangeVisibilityState extends LoginState{}
+class MovieChangeVisibilityState extends MovieLoginState{}
 
-class LoginLoadingState extends LoginState{}
+class MovieLoginLoadingState extends MovieLoginState{}
 
-class LoginSuccessState extends LoginState{
+class MovieLoginSuccessState extends MovieLoginState{
   late final dynamic uid;
-  LoginSuccessState(this.uid);
+  MovieLoginSuccessState(this.uid);
 
 }
 
-class LoginErrorState extends LoginState {
+class MovieLoginErrorState extends MovieLoginState {
   late final String error;
 
-  LoginErrorState(this.error);
+  MovieLoginErrorState(this.error);
 }

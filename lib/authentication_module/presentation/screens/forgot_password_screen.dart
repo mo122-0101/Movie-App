@@ -7,9 +7,9 @@ import '../widget/text_field.dart';
 
 
 class ForgotPasswordScreen extends StatelessWidget {
-  const ForgotPasswordScreen({Key? key}) : super(key: key);
+  ForgotPasswordScreen({Key? key}) : super(key: key);
   static const String id = 'forgot password';
-
+  TextEditingController emailController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,8 +39,9 @@ class ForgotPasswordScreen extends StatelessWidget {
                 ),),
             ),
             const SizedBox(height: 60,),
-            DefaultTextField(
-              hintText: "Email", ),
+            DefaultFormField(validate:(value){}, label: "Email", controller: emailController, type: TextInputType.emailAddress),
+
+
             const SizedBox(height: 25.0,),
             Padding(
               padding: const EdgeInsets.all(30.0),

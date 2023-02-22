@@ -3,7 +3,7 @@ import 'package:movie/authentication_module/presentation/screens/forgot_password
 import 'package:movie/authentication_module/presentation/screens/sign_in_screen.dart';
 import 'package:movie/core/services/services_locator.dart';
 import 'authentication_module/presentation/screens/sign_up_screen.dart';
-import 'movies_module/presentation/screens/movies_screen.dart';
+
 void main(){
 ServicesLocator().init();
 
@@ -18,9 +18,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
-          SignInScreen.id:(context)=> const SignInScreen(),
-          SignUpScreen.id:(context)=> const SignUpScreen(),
-          ForgotPasswordScreen.id:(context)=> const ForgotPasswordScreen(),
+          SignInScreen.id:(context)=>  SignInScreen(),
+          SignUpScreen.id:(context)=>  SignUpScreen(),
+          ForgotPasswordScreen.id:(context)=>  ForgotPasswordScreen(),
       },
       debugShowCheckedModeBanner: false,
       title: 'Movies App',
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
 
 
 
-      home: const MoviesScreen(),
+      home:  SignInScreen(),
     );
   }
 }

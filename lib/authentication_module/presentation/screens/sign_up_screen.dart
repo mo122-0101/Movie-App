@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:movie/authentication_module/presentation/screens/sign_in_screen.dart';
+import 'package:movie/authentication_module/presentation/widget/text_field.dart';
 import '../widget/button_widget.dart';
-import '../widget/text_field.dart';
+
+
 
 
 
 class SignUpScreen extends StatelessWidget {
-  const SignUpScreen({Key? key}) : super(key: key);
+  SignUpScreen({Key? key}) : super(key: key);
   static const String id = 'sign up';
-
+  TextEditingController nameController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController phoneController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,16 +43,16 @@ class SignUpScreen extends StatelessWidget {
 
                   ),),
                 const SizedBox(height: 60,),
-                DefaultTextField(
-                  hintText: "Full Name", ),
+                DefaultFormField(validate: (value){}, label: "Full Name", controller: nameController, type: TextInputType.name),
+
                 const SizedBox(height: 15,),
-                DefaultTextField(
-                  hintText: "Email Address", ),
+                DefaultFormField(validate: (value){}, label: "Email Address", controller: emailController, type: TextInputType.emailAddress),
+
                 const SizedBox(height: 15,),
-                DefaultTextField(
-                  hintText: "Phone Number", ),
+                DefaultFormField(validate: (value){}, label: "Phone Number", controller: phoneController, type:TextInputType.phone),
+
                 const SizedBox(height: 15,),
-                DefaultTextField(hintText: "Password",suffix: Icons.visibility_outlined),
+                DefaultFormField(validate: (value){}, label: "Password", controller: passwordController, type: TextInputType.visiblePassword,suffix: Icons.visibility_outlined),
                 const SizedBox(height: 30,),
 
                 const SizedBox(height: 30,),
